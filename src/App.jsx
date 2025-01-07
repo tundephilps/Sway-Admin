@@ -6,7 +6,7 @@ import Reports from "./Pages/Dashboard/Reports";
 import Booking from "./Pages/Dashboard/Booking";
 import Customer from "./Pages/Dashboard/Customer";
 import Technician from "./Pages/Dashboard/Technician";
-import Service from "./Pages/Dashboard/Service";
+import Service from "./Pages/Dashboard/Services/Service";
 import Layout from "./components/Layout/Layout";
 
 function App() {
