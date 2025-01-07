@@ -1,13 +1,13 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Login from "./Pages/Auth/Login";
 import Homepage from "./Pages/Dashboard/Homepage";
-import Layout from "./components/Layout";
 import Settings from "./Pages/Dashboard/Settings";
 import Reports from "./Pages/Dashboard/Reports";
 import Booking from "./Pages/Dashboard/Booking";
 import Customer from "./Pages/Dashboard/Customer";
 import Technician from "./Pages/Dashboard/Technician";
 import Service from "./Pages/Dashboard/Service";
+import Layout from "./components/Layout/Layout";
 
 function App() {
   return (

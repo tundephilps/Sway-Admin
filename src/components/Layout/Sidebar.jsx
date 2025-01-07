@@ -1,8 +1,7 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import { FiSettings } from "react-icons/fi";
 import { AiOutlinePlus } from "react-icons/ai";
-import Logo from "../assets/Logo.png";
+import Logo from "../../assets/Logo.png";
 import { GrHomeRounded } from "react-icons/gr";
 import { BiStoreAlt } from "react-icons/bi";
 import { LiaIdCard } from "react-icons/lia";
@@ -12,8 +11,8 @@ import { HiOutlinePresentationChartLine } from "react-icons/hi2";
 import { RiSettings4Line } from "react-icons/ri";
 import { MdOutlineLogout } from "react-icons/md";
 import { Link } from "react-router-dom";
-import Face from "../assets/Avatars.png";
-import Add from "../assets/Frame.png";
+import Face from "../../assets/Avatars.png";
+import Add from "../../assets/Frame.png";
 
 const Sidebar = () => {
   const location = useLocation();
@@ -29,7 +28,7 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="min-h-screen w-64 bg-[#f7f7f5] shadow-lg flex flex-col justify-between">
+    <div className="min-h-screen w-64 bg-[#f7f7f5]  flex flex-col justify-between">
       {/* Logo and Menu */}
       <div>
         {/* Logo */}
