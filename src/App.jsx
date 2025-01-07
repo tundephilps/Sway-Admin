@@ -8,6 +8,8 @@ import Customer from "./Pages/Dashboard/Customer";
 import Technician from "./Pages/Dashboard/Technician";
 import Service from "./Pages/Dashboard/Services/Service";
 import Layout from "./components/Layout/Layout";
+import SpecificService from "./Pages/Dashboard/Services/SpecificService";
+import AddOns from "./Pages/Dashboard/Services/AddOns";
 
 function App() {
   return (
@@ -19,6 +21,10 @@ function App() {
           <Route path="Dashboard" element={<Homepage />} />
 
           <Route path="ServiceManagement" element={<Service />} />
+
+          <Route path="SpecificService" element={<SpecificService />} />
+
+          <Route path="AddOns" element={<AddOns />} />
           <Route path="TechnicianManagement" element={<Technician />} />
           <Route path="CustomerManagement" element={<Customer />} />
           <Route path="BookingManagement" element={<Booking />} />

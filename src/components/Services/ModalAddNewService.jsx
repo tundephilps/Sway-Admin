@@ -5,7 +5,7 @@ import data from "@emoji-mart/data";
 import Picker from "@emoji-mart/react";
 import Emoji from "../../assets/Emoji.png";
 
-const Modal = ({ closeModal }) => {
+const ModalAddNewService = ({ closeModal }) => {
   const [showPicker, setShowPicker] = useState(false);
   const [selectedEmoji, setSelectedEmoji] = useState("😊"); // Default emoji
 
@@ -98,4 +98,4 @@ const Modal = ({ closeModal }) => {
   );
 };
 
-export default Modal;
+export default ModalAddNewService;

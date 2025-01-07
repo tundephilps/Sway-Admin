@@ -3,8 +3,9 @@ import Navbar from "../../../components/Services/Navbar";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 import { LuDot } from "react-icons/lu";
 import { FiChevronRight } from "react-icons/fi";
-import Modal from "../../../components/Services/Modal";
 import Emoji from "../../../assets/Emoji.png";
+import { Link } from "react-router-dom";
+import ModalAddCategory from "../../../components/Services/ModalAddCategory";
 
 const Service = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -48,7 +49,8 @@ const Service = () => {
   return (
     <div className="bg-[#fdfdfd] w-full h-full">
       <Navbar />
-      <div className="flex flex-row items-center justify-between p-4">
+      {/* Header */}
+      <div className="flex flex-row items-center justify-between px-6 py-4">
         <h1 className="font-bold text-2xl">Service Management</h1>
         <button
           onClick={openModal}
@@ -57,11 +59,15 @@ const Service = () => {
           <MdOutlineKeyboardArrowLeft className="text-2xl" /> Add New Services
         </button>
       </div>
-      {isModalOpen && <Modal closeModal={closeModal} openModal={openModal} />}
+      {isModalOpen && (
+        <ModalAddCategory closeModal={closeModal} openModal={openModal} />
+      )}
 
+      {/* Services List */}
       <div className="p-6 max-w-4xl mx-auto bg-white rounded-lg border">
         {categories.map((category, index) => (
-          <div
+          <Link
+            to="/SpecificService"
             key={index}
             className="flex items-center justify-between py-3 px-24  hover:bg-gray-50 cursor-pointer"
           >
@@ -83,7 +89,7 @@ const Service = () => {
               </div>
             </div>
             <FiChevronRight className="text-red-400 text-xl" />
-          </div>
+          </Link>
         ))}
       </div>
     </div>
