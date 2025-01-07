@@ -3,9 +3,17 @@ import Logo from "../../assets/Logo.png";
 
 import { FiMail, FiLock } from "react-icons/fi";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
+
+  const navigate = useNavigate(); // React Router DOM hook for navigation
+
+  const handleSubmit = (e) => {
+    navigate("/Dashboard"); // Navigate to the homepage route
+  };
+
   return (
     <div className="w-full h-screen bg-[#fff0f1] flex items-center justify-center">
       <div className="bg-white lg:w-[464px] w-full p-6 rounded-lg border border-[#e1e4ea]">
@@ -64,6 +72,7 @@ const Login = () => {
 
           {/* Login Button */}
           <button
+            onClick={handleSubmit}
             type="submit"
             className="w-full bg-[#ff6875] text-white text-sm font-medium py-3 rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 transition"
           >
