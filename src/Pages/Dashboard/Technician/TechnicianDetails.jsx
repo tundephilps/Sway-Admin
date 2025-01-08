@@ -12,7 +12,18 @@ import {
   MdContentCopy,
   MdPhone,
   MdOutlineWorkHistory,
+  MdFilterList,
 } from "react-icons/md";
+import { RxCaretSort } from "react-icons/rx";
+
+import { FiMoreVertical } from "react-icons/fi";
+
+import { FiSearch, FiFilter, FiChevronDown } from "react-icons/fi";
+import { FiThermometer } from "react-icons/fi";
+import { FaThermometerHalf } from "react-icons/fa";
+import BookingsTable from "../../../components/Technician/BookingsTable";
+import Pagination2 from "../../../components/Technician/Pagination2";
+import Pagination from "../../../components/Technician/Pagination";
 
 const TechnicianDetails = () => {
   const navigate = useNavigate();
@@ -46,11 +57,25 @@ const TechnicianDetails = () => {
     { name: "LASH TECHNICIAN", color: "bg-teal-100 text-teal-500" },
   ];
 
+  const stats = [
+    {
+      label: "Total Bookings",
+      value: 150,
+      icon: <FaThermometerHalf className="text-gray-500 text-xl" />,
+    },
+    {
+      label: "Customer Repeat Rate",
+      value: "25%",
+      icon: <FaThermometerHalf className="text-gray-500 text-xl" />,
+    },
+  ];
+
   return (
     <div className="bg-[#fdfdfd] w-full h-full">
       <Navbar />
 
       <div className="grid grid-cols-3 h-full">
+        {/* First Grid */}
         <div className="border-r  ">
           {/* Go back */}
           <div className="px-6 pt-6 pb-4 inline-flex items-center gap-4">
@@ -78,7 +103,7 @@ const TechnicianDetails = () => {
               <span className="text-xs text-gray-700">Avaliable</span>
             </div>
           </div>
-
+          {/* Personal Details */}
           <div className="space-y-4 p-6 ">
             {details.map((detail, index) => (
               <div key={index} className="flex items-start space-x-3">
@@ -130,9 +155,73 @@ const TechnicianDetails = () => {
             </div>
           </div>
         </div>
+
+        {/* Second Section */}
         <div className="col-span-2 p-6">
           <div>
             <p className="font-bold">Analytics</p>
+
+            {/* Stats */}
+            <div className="grid grid-cols-2 gap-4 pt-6">
+              {stats.map((stat, index) => (
+                <div
+                  key={index}
+                  className="flex items-center bg-white justify-between border border-gray-200 rounded-lg p-4"
+                >
+                  <div>
+                    <p className="text-sm text-gray-500">{stat.label}</p>
+                    <p className="text-2xl font-semibold text-gray-800">
+                      {stat.value}
+                    </p>
+                  </div>
+                  <div className="flex items-center justify-center w-10 h-10 border rounded-full">
+                    {stat.icon}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="space-y-2">
+              {/* Title and Underline */}
+              <div>
+                <h1 className="text-sm pt-6 font-medium text-gray-800">
+                  All Bookings
+                </h1>
+                <div className="inline-flex w-full">
+                  <div className="h-[2px] w-24 bg-pink-500 "></div>
+                  <div className="h-[2px] w-full bg-gray-300 "></div>
+                </div>
+              </div>
+
+              {/* Action Bar */}
+              <div className="flex justify-between items-center">
+                <h2 className="text-sm pt-4 font-bold text-gray-800">
+                  All Bookings
+                </h2>
+                <div className="flex items-center space-x-6 text-gray-500">
+                  {/* Search */}
+                  <button className="flex items-center space-x-2 hover:text-gray-800">
+                    <FiSearch className="text-lg" />
+                    <span className="text-xs">Search</span>
+                  </button>
+
+                  {/* Filter */}
+                  <button className="flex items-center space-x-2 hover:text-gray-800">
+                    <MdFilterList className="text-lg" />
+                    <span className="text-xs">Filter</span>
+                  </button>
+
+                  {/* Sort */}
+                  <button className="flex items-center space-x-2 hover:text-gray-800">
+                    <RxCaretSort className="text-lg" />
+                    <span className="text-xs">Sort</span>
+                  </button>
+                </div>
+              </div>
+
+              <BookingsTable />
+              <Pagination />
+            </div>
           </div>
         </div>
       </div>
