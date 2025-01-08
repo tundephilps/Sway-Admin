@@ -4,13 +4,14 @@ import Homepage from "./Pages/Dashboard/Homepage";
 import Settings from "./Pages/Dashboard/Settings";
 import Reports from "./Pages/Dashboard/Reports";
 import Booking from "./Pages/Dashboard/Booking";
-import Customer from "./Pages/Dashboard/Customer";
+import Customer from "./Pages/Dashboard/Customer/Customer";
 import Technician from "./Pages/Dashboard/Technician/Technician";
 import Service from "./Pages/Dashboard/Services/Service";
 import Layout from "./components/Layout/Layout";
 import SpecificService from "./Pages/Dashboard/Services/SpecificService";
 import AddOns from "./Pages/Dashboard/Services/AddOns";
 import TechnicianDetails from "./Pages/Dashboard/Technician/TechnicianDetails";
+import CustomerDetails from "./Pages/Dashboard/Customer/CustomerDetails";
 
 function App() {
   return (
@@ -30,6 +31,8 @@ function App() {
 
           <Route path="TechnicianDetails" element={<TechnicianDetails />} />
           <Route path="CustomerManagement" element={<Customer />} />
+
+          <Route path="CustomerDetails" element={<CustomerDetails />} />
           <Route path="BookingManagement" element={<Booking />} />
           <Route path="Reports" element={<Reports />} />
           <Route path="Settings" element={<Settings />} />
