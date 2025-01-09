@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Login from "./Pages/Auth/Login";
 import Homepage from "./Pages/Dashboard/Homepage";
-import Settings from "./Pages/Dashboard/Settings";
-import Reports from "./Pages/Dashboard/Reports";
+import Settings from "./Pages/Dashboard/Settings/Settings";
+import Reports from "./Pages/Dashboard/Reports/Reports";
 import Customer from "./Pages/Dashboard/Customer/Customer";
 import Technician from "./Pages/Dashboard/Technician/Technician";
 import Service from "./Pages/Dashboard/Services/Service";

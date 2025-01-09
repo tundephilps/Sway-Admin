@@ -28,7 +28,7 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="min-h-screen w-64 bg-[#f7f7f5]  flex flex-col justify-between">
+    <div className="min-h-full whitespace-nowrap bg-[#f7f7f5]  flex flex-col justify-between">
       {/* Logo and Menu */}
       <div>
         {/* Logo */}
@@ -90,7 +90,9 @@ const Sidebar = () => {
           <img src={Add} />
           <p className="font-bold">Add a new Admin</p>
           <p className="text-xs text-[#a9a9a8]">
-            Share the load – add a new admin to keep things running smoothly!
+            Share the load – add a new admin
+            <br />
+            to keep things running smoothly!
           </p>
           <div>
             <h4 className="text-sm font-medium text-[#ff6875] inline-flex gap-2">
