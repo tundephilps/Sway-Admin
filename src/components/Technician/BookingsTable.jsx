@@ -29,6 +29,54 @@ const BookingsTable = () => {
       statusColor: "text-green-500 bg-green-100",
       avatar: Face,
     },
+    {
+      customer: "Maria Gomez",
+      service: "Gel Manicure",
+      date: "Nov 25, 2024, 10:00 AM",
+      status: "Upcoming",
+      statusColor: "text-blue-500 bg-blue-100",
+      avatar: Face, // Replace with the actual image path
+    },
+    {
+      customer: "Maria Gomez",
+      service: "Gel Manicure",
+      date: "Nov 25, 2024, 10:00 AM",
+      status: "Cancelled",
+      statusColor: "text-red-500 bg-red-100",
+      avatar: Face,
+    },
+    {
+      customer: "Maria Gomez",
+      service: "Gel Manicure",
+      date: "Nov 25, 2024, 10:00 AM",
+      status: "Completed",
+      statusColor: "text-green-500 bg-green-100",
+      avatar: Face,
+    },
+    {
+      customer: "Maria Gomez",
+      service: "Gel Manicure",
+      date: "Nov 25, 2024, 10:00 AM",
+      status: "Upcoming",
+      statusColor: "text-blue-500 bg-blue-100",
+      avatar: Face, // Replace with the actual image path
+    },
+    {
+      customer: "Maria Gomez",
+      service: "Gel Manicure",
+      date: "Nov 25, 2024, 10:00 AM",
+      status: "Cancelled",
+      statusColor: "text-red-500 bg-red-100",
+      avatar: Face,
+    },
+    {
+      customer: "Maria Gomez",
+      service: "Gel Manicure",
+      date: "Nov 25, 2024, 10:00 AM",
+      status: "Completed",
+      statusColor: "text-green-500 bg-green-100",
+      avatar: Face,
+    },
   ];
 
   return (
