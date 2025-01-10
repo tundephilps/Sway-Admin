@@ -1,7 +1,10 @@
-import React from "react";
-import { HiDownload, HiPlus, HiDotsVertical } from "react-icons/hi";
+import React, { useState } from "react";
+import { HiDownload, HiPlus, HiDotsVertical, HiX } from "react-icons/hi";
 import Face from "../../assets/Avatar2.png";
+import ModalAddAdmin from "./ModalAddAdmin";
+
 const Team = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const teamMembers = [
     {
       name: "Maria Gomez",
@@ -53,10 +56,14 @@ const Team = () => {
             <HiDownload className="text-xl" />
             <span>Export CSV</span>
           </button>
-          <button className="flex items-center gap-2 px-4 py-2 bg-[#ff8691] text-white rounded-md hover:bg-red-600">
-            {/* <HiPlus className="text-xl" /> */}
+          <button
+            onClick={() => setIsOpen(true)}
+            className="flex items-center gap-2 px-4 py-2 bg-[#ff8691] text-white rounded-md hover:bg-red-600"
+          >
             <span>Add new Admin</span>
           </button>
+
+          {isOpen && <ModalAddAdmin isOpen={isOpen} setIsOpen={setIsOpen} />}
         </div>
       </div>
 

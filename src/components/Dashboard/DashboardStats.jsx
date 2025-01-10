@@ -20,7 +20,7 @@ const StatsCard = ({ title, value }) => {
 
 const DashboardStats = () => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-4 px-6 bg-[#fdfdfd] ">
+    <div className="grid grid-cols-1 sm:grid-cols-3 gap-y-2 gap-x-4 px-6 bg-[#fdfdfd] ">
       <StatsCard title="Total Bookings Today" value="25" />
       <StatsCard title="Total Revenue Today" value="AED 1,200" />
       <StatsCard title="Total Revenue Today" value="AED 1,200" />

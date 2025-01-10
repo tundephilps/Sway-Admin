@@ -78,12 +78,12 @@ const AvaliableTechnicians = () => {
   return (
     <div className="bg-[#fdfdfd] grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
       {/* Available Technicians */}
-      <div className="col-span-2">
+      <div className="lg:col-span-2 col-span-3">
         <Technicians />
       </div>
 
       {/* Bookings Overview */}
-      <div>
+      <div className="lg:col-span-1 col-span-3">
         <BookingsOverview />
       </div>
     </div>

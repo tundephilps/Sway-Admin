@@ -44,7 +44,7 @@ export default () => {
         </div>
       </div>
       {/* On mobile version */}
-      {/* <div className="flex items-center justify-between text-sm text-gray-600 font-medium md:hidden">
+      <div className="flex items-center justify-between text-sm text-gray-600 font-medium md:hidden">
         <div className="px-4 py-2 border rounded-lg duration-150 hover:bg-gray-50">
           Previous
         </div>
@@ -52,7 +52,7 @@ export default () => {
         <div className="px-4 py-2 border rounded-lg duration-150 hover:bg-gray-50">
           Next
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };
