@@ -59,7 +59,7 @@ const CustomerTable = () => {
 
   return (
     <div className="overflow-x-auto">
-      <div className="border border-gray-300 rounded-md">
+      <div className="lg:border border-gray-300 rounded-md">
         <div className="flex justify-between items-center p-4">
           <h2 className="text-xl font-bold mb-4 opacity-0">.</h2>
           <div className="inline-flex gap-4">

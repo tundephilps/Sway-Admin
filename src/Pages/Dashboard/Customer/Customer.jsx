@@ -16,7 +16,7 @@ const Customer = () => {
       </div>
 
       {/* Table */}
-      <div className="px-6">
+      <div className="lg:px-6 px-0">
         <CustomerTable />
       </div>
     </div>

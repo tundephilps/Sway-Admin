@@ -8,6 +8,7 @@ import Manicure1 from "../../../assets/Man1.png";
 import Manicure2 from "../../../assets/Man3.png";
 import Manicure3 from "../../../assets/Man2.png";
 import { useNavigate } from "react-router-dom";
+import { IoIosAdd } from "react-icons/io";
 
 const SpecificService = () => {
   const navigate = useNavigate();
@@ -54,8 +55,7 @@ const SpecificService = () => {
           onClick={openModal}
           className="px-4 bg-[#ff6875] inline-flex items-center gap-2 text-white text-xs font-medium py-2 rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 transition"
         >
-          <MdOutlineKeyboardArrowLeft className="text-2xl" /> Add New Manicure
-          Category
+          <IoIosAdd className="text-2xl" /> Add New Manicure Category
         </button>
       </div>
 
@@ -63,13 +63,14 @@ const SpecificService = () => {
         <ModalAddCategory closeModal={closeModal} openModal={openModal} />
       )}
 
-      <div className="grid grid-cols-3 w-full p-6 gap-8 ">
+      <div className="grid lg:grid-cols-3 grid-cols-1 w-full p-6 gap-8 ">
         {services.map((service, index) => (
           <ServiceCard
             key={index}
             image={service.image}
             title={service.title}
             price={service.price}
+            isModalOpen={isModalOpen}
           />
         ))}
       </div>

@@ -6,7 +6,7 @@ import Password from "../../../components/Settings/Password";
 
 const Settings = () => {
   // State to manage the active tab
-  const [activeTab, setActiveTab] = useState("Profile");
+  const [activeTab, setActiveTab] = useState("Team");
 
   // Components to render for each tab
   const renderTabContent = () => {

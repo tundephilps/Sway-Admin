@@ -63,7 +63,7 @@ const AddOns = () => {
         <ModalAddOns closeModal={closeModal} openModal={openModal} />
       )}
 
-      <div className="grid grid-cols-3 w-full p-6 gap-8 ">
+      <div className="grid lg:grid-cols-3 grid-cols-1 w-full p-6 gap-8 ">
         <AddOnCards />
         <AddOnCards /> <AddOnCards />
       </div>

@@ -3,7 +3,7 @@ import Search from "../../assets/Search.png";
 
 import File from "../../assets/File.png";
 
-const ModalAddCategory = ({ closeModal }) => {
+const ModalEditCategory = ({ setShowEditModal }) => {
   const [variations, setVariations] = useState([]);
   const [showVariations, setShowVariations] = useState(false);
 
@@ -50,18 +50,18 @@ const ModalAddCategory = ({ closeModal }) => {
   };
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 ">
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
       <div className="bg-white rounded-lg p-6 w-full max-w-md m-4 relative overflow-y-auto overscroll-y-auto h-[90vh]">
         <div className="overflow-y-auto overscroll-y-auto ">
           <img src={Search} className="mx-auto" />
           <h2 className="text-xl text-center pt-4 font-semibold text-gray-900 mb-2">
-            Add Service Category
+            Edit Manicure Category
           </h2>
 
-          <div className="my-2">
+          <div className="my-2 pt-2">
             <label
               htmlFor="email"
-              className="block text-xs font-medium text-[#0e121b] mb-2"
+              className="block text-sm font-medium text-[#0e121b] mb-2"
             >
               Name of Category
             </label>
@@ -74,7 +74,7 @@ const ModalAddCategory = ({ closeModal }) => {
               />
             </div>
           </div>
-          <div className="my-2">
+          <div className="">
             <label
               htmlFor="email"
               className="block text-xs font-medium text-[#0e121b] mb-2"
@@ -90,10 +90,23 @@ const ModalAddCategory = ({ closeModal }) => {
             </div>
           </div>
 
+          <div>
+            <label className="block text-gray-700 text-xs font-medium my-2">
+              Amount
+            </label>
+            <div className="flex items-center border border-gray-300 rounded-lg overflow-hidden focus-within:ring-2 focus-within:ring-[#ff6875]">
+              <input
+                type="number"
+                placeholder="0.00"
+                className="flex-1 px-4 py-2 text-sm focus:outline-none"
+              />
+              <span className="px-4 py-2 text-gray-500 text-sm">AED</span>
+            </div>
+          </div>
           {/* File Upload */}
           <label
             htmlFor="email"
-            className="block text-xs font-medium text-[#0e121b] mb-2"
+            className="block text-xs font-medium text-[#0e121b] my-2"
           >
             Save
           </label>
@@ -146,29 +159,13 @@ const ModalAddCategory = ({ closeModal }) => {
           </div>
 
           <div className="">
-            {!showVariations && (
-              <div>
-                <label className="block text-gray-700 text-xs font-medium my-2">
-                  Amount
-                </label>
-                <div className="flex items-center border border-gray-300 rounded-lg overflow-hidden focus-within:ring-2 focus-within:ring-[#ff6875]">
-                  <input
-                    type="number"
-                    placeholder="0.00"
-                    className="flex-1 px-4 py-2 text-sm focus:outline-none"
-                  />
-                  <span className="px-4 py-2 text-gray-500 text-sm">AED</span>
-                </div>
-              </div>
-            )}
-
             <div className="mt-4 inline-flex items-center w-full gap-4">
               <div className="h-[1px] w-full bg-gray-300" />
               <button
                 onClick={handleCreateVariation}
                 className="px-4 py-2 font-medium text-gray-600 whitespace-nowrap border text-xs rounded-lg focus:outline-none focus:ring focus:ring-blue-300"
               >
-                Create Variation
+                Created Variation
               </button>
               <div className="h-[1px] w-full bg-gray-300" />
             </div>
@@ -178,9 +175,6 @@ const ModalAddCategory = ({ closeModal }) => {
             <div className="space-y-4 pt-4">
               {variations.map((variation, index) => (
                 <>
-                  <p className="text-[10px] bg-gray-100 px-2 text-gray-600">
-                    NEW VARIATION
-                  </p>
                   <div key={index}>
                     <div className="flex items-center space-x-2 pb-0">
                       <input
@@ -209,78 +203,6 @@ const ModalAddCategory = ({ closeModal }) => {
                         🗑️
                       </button>
                     </div>
-
-                    <div className="my-2 pl-8">
-                      <label
-                        htmlFor="email"
-                        className="block text-xs font-medium text-[#0e121b] mb-2"
-                      >
-                        Description
-                      </label>
-                      <div className="flex items-center border border-gray-300 rounded-md px-3 py-2 focus-within:ring-1 focus-within:ring-[#ff6875]">
-                        <input
-                          type="text"
-                          placeholder=""
-                          className="w-full outline-none text-sm text-gray-700"
-                        />
-                      </div>
-                    </div>
-                    {/* File Upload */}
-                    <label
-                      htmlFor="email"
-                      className=" pl-8 block text-xs font-medium text-[#0e121b] my-2"
-                    >
-                      Image
-                    </label>
-                    <div className="ml-8 p-4 border rounded-md  ">
-                      {!selectedFile ? (
-                        <div className="flex items-center gap-4">
-                          <img src={File} />
-                          <div className="flex-1">
-                            <p className="text-gray-700 text-sm font-medium">
-                              Choose an Image
-                            </p>
-                            <p className="text-gray-500 text-xs">
-                              JPEG and PNG formats
-                            </p>
-                          </div>
-                          <label className="border text-gray-500 text-xs px-4 py-2 rounded-md cursor-pointer ">
-                            Browse File
-                            <input
-                              type="file"
-                              className="hidden"
-                              onChange={handleFileChange}
-                            />
-                          </label>
-                        </div>
-                      ) : (
-                        <div className="flex items-center gap-4">
-                          <img src={File} />
-                          <div className="flex-1">
-                            <p className="text-gray-700 text-sm font-medium">
-                              {selectedFile.name}
-                            </p>
-                            <p className="text-gray-500 text-xs">
-                              {isUploading
-                                ? `Uploading...`
-                                : `${(selectedFile.size / 1024).toFixed(2)} KB`}
-                            </p>
-                          </div>
-                          {isUploading ? (
-                            <div className="flex items-center">
-                              <span className="animate-spin h-4 w-4 border-2 border-blue-500 border-t-transparent rounded-full"></span>
-                            </div>
-                          ) : (
-                            <button
-                              className="text-red-500 hover:text-red-700"
-                              onClick={handleRemoveFile}
-                            >
-                              ✕
-                            </button>
-                          )}
-                        </div>
-                      )}
-                    </div>
                   </div>
                 </>
               ))}
@@ -296,7 +218,7 @@ const ModalAddCategory = ({ closeModal }) => {
 
           <div className="mt-6 flex w-full gap-3">
             <button
-              onClick={closeModal}
+              onClick={() => setShowEditModal(false)}
               className="w-full py-2 text-sm font-medium text-gray-700 border rounded-md hover:bg-gray-200"
             >
               Cancel
@@ -311,4 +233,4 @@ const ModalAddCategory = ({ closeModal }) => {
   );
 };
 
-export default ModalAddCategory;
+export default ModalEditCategory;

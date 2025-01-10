@@ -223,8 +223,8 @@ const BookingsTable = () => {
   };
 
   return (
-    <div className="p-6 bg-[#fdfdfd]">
-      <div className="bg-white border rounded-lg">
+    <div className="p-6 bg-[#fdfdfd] overflow-x-auto">
+      <div className="bg-white lg:border rounded-lg">
         <div className="flex justify-between items-center p-4">
           <h2 className="text-xl font-bold mb-4 opacity-0">.</h2>
           <div className="inline-flex gap-4">

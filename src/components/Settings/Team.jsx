@@ -44,7 +44,7 @@ const Team = () => {
   ];
 
   return (
-    <div className="border rounded-md bg-white mx-auto p-6 flex gap-20">
+    <div className="border rounded-md bg-white mx-auto p-6 lg:flex lg:flex-row flex-col gap-20">
       <div className="mb-6">
         <h2 className="text-xl font-semibold mb-2">Team Members</h2>
         <p className="text-gray-500 text-sm">

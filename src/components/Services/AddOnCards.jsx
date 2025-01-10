@@ -28,7 +28,7 @@ const AddOnCards = () => {
           <FiMoreVertical className="text-gray-600" size={20} />
         </button>
         {showMenu && (
-          <div className="absolute top-full right-0 mt-2 w-32 bg-white border border-gray-200 rounded-lg shadow-lg">
+          <div className="absolute top-12 right-0 mt-2 w-32  bg-white border border-gray-200 rounded-lg shadow-lg">
             <button className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
               Edit
             </button>

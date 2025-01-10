@@ -102,7 +102,7 @@ const CustomerDetails = () => {
     <div className="bg-[#fdfdfd] w-full ">
       <Navbar />
 
-      <div className="grid grid-cols-3 h-full">
+      <div className="grid lg:grid-cols-3 grid-cols-1 h-full">
         {/* First Grid */}
         <div className="border-r  ">
           {/* Go back */}

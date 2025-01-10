@@ -94,11 +94,11 @@ const Sidebar = () => {
             <br />
             to keep things running smoothly!
           </p>
-          <div>
+          <Link to="/Settings">
             <h4 className="text-sm font-medium text-[#ff6875] inline-flex gap-2">
               <AiOutlinePlus className=" text-lg" /> Add admin
             </h4>
-          </div>
+          </Link>
         </div>
 
         {/* User Info */}
